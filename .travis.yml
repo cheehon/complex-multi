@@ -20,3 +20,14 @@ after_success:
   - docker push cheehon/multi-nginx
   - docker push cheehon/multi-server
   - docker push cheehon/multi-worker
+deploy:
+  provider: elasticbeanstalk
+  region: 'ap-southeast-1'
+  app: 'complex-multi'
+  env: 'Complexmulti-env'
+  bucket_name: 'elasticbeanstalk-ap-southeast-1-941993622343'
+  buckey_path: 'docker-multi'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
