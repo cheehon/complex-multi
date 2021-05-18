@@ -5,8 +5,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 
-class App extends Component {
-  render() {
+function App() {
   return (
     <Router>
       <div className="App">
@@ -30,7 +29,6 @@ class App extends Component {
       </div>
     </Router>
   );
-}
 }
 
 export default App;
